@@ -15,8 +15,8 @@
         <nav class="navbar">
             <a href="#" class="nav-logo">CS Exam Prep Hub 💻</a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#questions" class="nav-link">Questions</a></li>
-                <li class="nav-item"><a href="https://github.com" target="_blank" class="nav-link">GitHub</a></li>
+                <li class="nav-item"><a href="#mcq-section" class="nav-link">MCQ/MSQ</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             </ul>
         </nav>
     </header>
@@ -24,15 +24,28 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Welcome to the CS Exam Prep Hub</h1>
-                <p>Your one-stop destination for Computer Science MCQs & MSQs from top competitive exams like GATE, ISRO, BPSC, TCS, and more. Sharpen your skills and ace your next test!</p>
+                <h1>CS Exam Prep Hub</h1>
+                <p>Practice MCQs & MSQs for all major CS exams with detailed explanations.</p>
             </div>
         </section>
 
-        <section id="questions" class="questions-section">
+        <section id="mcq-section" class="questions-section">
             <h2>Practice Questions</h2>
+            
+            <div id="filter-container" class="filter-container">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="GATE">GATE</button>
+                <button class="filter-btn" data-filter="BPSC">BPSC</button>
+                <button class="filter-btn" data-filter="ISRO">ISRO</button>
+            </div>
+
             <div id="questions-container" class="questions-container">
                 </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About</h2>
+            <p>This hub is a dedicated platform for Computer Science students and professionals preparing for competitive examinations. We provide a curated list of questions from various exams to help you test your knowledge and prepare effectively.</p>
         </section>
     </main>
 
