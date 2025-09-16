@@ -135,3 +135,4 @@
         "explanation": "A minimum weight spanning tree (MST) is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together without any cycles, and with the minimum possible total edge weight. The provided solution states that the number of minimum weight spanning trees for the graph shown is 3. This can occur when there are multiple edges of the same weight that can be chosen to form a minimum spanning tree without creating a cycle."
     }
 ]
+
