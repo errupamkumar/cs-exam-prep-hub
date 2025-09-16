@@ -1,138 +1,138 @@
 [
-    {
-        "id": 1,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "The weight of minimum spanning tree in graph G, calculated using Kruskal's algorithm is:",
-        "options": ["14", "15", "17", "18", "None of the above"],
-        "answer": "15",
-        "explanation": "A minimum spanning tree (MST) is a subset of the edges (V-1) of a connected, edge-weighted undirected graph G(V,E) that connects all the vertices together, without any cycles and with the minimum possible total edge weight. For a graph with 5 vertices, we need 4 edges in the MST. The edge set for the given graph is {2, 3, 4, 5, 6, 7, 8}. The edge set for the MST is {2, 3, 4, 6}. The minimum cost is the sum of these edge weights, which is 2+3+4+6 = 15."
-    },
-    {
-        "id": 2,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Consider the following Statements\nStatement 1: Greedy technique solves the problem correctly and always provides an optimized solution to the problem.\nStatement 2: Bellman ford, Floyd-warshal, and Prim's algorithms use the Dynamic Programming technique to solve the Path problems.\nWhich of the following is true?",
-        "options": ["Statement 1 is true only", "Statement 2 is false only", "Statement 1 and Statement 2 both are false.", "Statement 1 and Statement 2 both are true.", "None of the above"],
-        "answer": "Statement 1 and Statement 2 both are false.",
-        "explanation": "This statement is false. The greedy technique does not always solve a problem correctly and doesn't always provide an optimized solution. Statement 2 is also false. While Bellman-Ford and Floyd-Warshall are dynamic programming algorithms, Prim's algorithm is a greedy algorithm, not a dynamic programming one. It is used to find a minimum spanning tree for a weighted undirected graph."
-    },
-    {
-        "id": 3,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Time complexity of Merge Sort Algorithm and Binary Search Algorithm are respectively:",
-        "options": ["$O(log_{2}n)$ and $O(n~log_{2}n)$", "$O(n~log_{2}n)$ and $O(log_{2}n)$", "$O(n^{2})$ and $O(log_{2}n)$", "$O(2^{n})$ and $O(n^{2})$", "None of the above"],
-        "answer": "$O(n~log_{2}n)$ and $O(log_{2}n)$",
-        "explanation": "Merge sort is based on the divide and conquer approach, and its recurrence relation is $T(n)=2T(n/2)+\Theta(n)$. Using Master's theorem, the time complexity of Merge Sort is $O(n log_{2}n)$. Binary search works by repeatedly dividing the search interval in half. The recurrence for binary search is $T(n)=T(n/2)+\theta(1)$. Using Master's theorem, its time complexity is $O(log_{2}n)$."
-    },
-    {
-        "id": 4,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Which of the following algorithm design technique is used in designing quick sort algorithm?",
-        "options": ["Dynamic", "Back tracking strategy", "Divide and conquer strategy", "Greedy strategy", "None of the above"],
-        "answer": "Divide and conquer strategy",
-        "explanation": "Quicksort is a divide-and-conquer algorithm. In this technique, a pivot element is chosen to reduce the problem into two smaller sets. The overall time complexity of Quicksort is $O(n log n)$. Its space complexity is $O(log n)$ and it is an in-place sort."
-    },
-    {
-        "id": 5,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Which one of the following properties of an algorithm ensures that each step of the algorithm is properly defined and the actions to be performed are clearly specified?",
-        "options": ["Finiteness", "Effectiveness", "Input", "Definiteness", "None of the above"],
-        "answer": "Definiteness",
-        "explanation": "Definiteness is the property that ensures each step of an algorithm is precisely defined, and the actions to be carried out are rigorously and unambiguously specified for each case. Other properties include Finiteness, which means the algorithm must terminate after a finite number of steps, and Effectiveness, which means each step must be feasible to perform correctly in a finite amount of time with available resources."
-    },
-    {
-        "id": 6,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "A ☐ is used to show the processing that takes place in the flowchart.",
-        "options": ["Diamond", "Ellipse", "Arrows", "Rectangle"],
-        "answer": "Rectangle",
-        "explanation": "In flowcharts, a rectangle represents a process. An oval represents a start or end point, a parallelogram represents input or output, and a diamond indicates a decision."
-    },
-    {
-        "id": 7,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "What is the time complexity for the following C module? Assume that n > 0;\n\n```c\nint module(int n)\n{\n if(n==1)\n return 1;\n else\n return (n+module(n-1))\n}\n```",
-        "options": ["O(n)", "O(log n)", "$O(n^{2})$", "$O(n!)$"],
-        "answer": "O(n)",
-        "explanation": "The recurrence relation for the given function is $T(n) = T(n-1) + c$, where 'c' represents a constant amount of work for the addition and function call. By expanding this recurrence, we find that the total number of steps is proportional to n. For example, $T(n) = T(n-k) + kc$. When $n-k=1$, then $k=n-1$. This leads to a time complexity of $O(n)$."
-    },
-    {
-        "id": 8,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Consider the recurrence function $T(n)=\begin{cases}2T(\sqrt n)+1,n>2\\\\ 2,0<n\le2\end{cases}$. Then T(n) in terms of big O notation is:",
-        "options": ["$O(log log n)$", "$O(log n)$", "$O(\sqrt n)$", "$O(n)$"],
-        "answer": "$O(log n)$",
-        "explanation": "The recurrence relation is $T(n)=2T(\sqrt n)+1$. By substituting $n = 2^m$, we get $T(2^m)=2T(2^{m/2})+1$. Let $S(m) = T(2^m)$. Then the new recurrence is $S(m) = 2S(m/2)+1$. This recurrence is in the form of Master's theorem's case 1, which gives a solution of $S(m) = O(m)$. Since $m=log_{2}n$, we have $T(n) = O(log_{2}n)$."
-    },
-    {
-        "id": 9,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Which one of the following correctly determines the solution of the recurrence relation with T(1)=1? $T(n) = 2T(\frac{n}{2}) + logn$",
-        "options": ["$T(n)= \Theta(n)$", "$T(n)= \Theta(n log n)$", "$T(n)= \Theta(n^2)$", "$T(n)= \Theta(log n)$"],
-        "answer": "$T(n)= \Theta(n)$",
-        "explanation": "The recurrence relation is $T(n) = 2T(\frac{n}{2}) + log n$. We can use the Master's theorem to solve this. Comparing it with $T(n) = aT(\frac{n}{b}) + f(n)$, we get $a=2, b=2$, and $f(n)=log n$. We compare $f(n)$ with $n^{log_{b}a} = n^{log_{2}2} = n$. Since $log n$ is polynomially smaller than $n$, we are in Case 1 of the Master's theorem. This means the solution is $T(n) = \Theta(n^{log_{b}a}) = \Theta(n)$."
-    },
-    {
-        "id": 10,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "In flowchart representation, which of the following symbols indicates input/output?",
-        "options": ["Oval", "Parallelogram", "Diamond", "Rectangle"],
-        "answer": "Parallelogram",
-        "explanation": "A parallelogram represents input or output in a flowchart. An oval represents a start or end point, a rectangle represents a process, and a diamond indicates a decision."
-    },
-    {
-        "id": 11,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "What is the time complexity for the following C module? Assume that n > 0;\n\n```c\nint fun1(int n)\n{\n int i,j,k, p,q=0;\n for(i=1; i<=n; i++)\n {\n  p=0;\n  for(j=n; j>1; j/=2)\n  {\n   p++;\n  }\n  k=k*2;\n }\n return q;\n}\n```\n\nWhich one of the following most closely approximates the return value of the function fun1?",
-        "options": ["$n^2$", "$n log^2 n$", "$n log n$", "$n log(log n)$"],
-        "answer": "$n log(log n)$",
-        "explanation": "The function `fun1` has a return value `q` which is initialized to 0 and is never changed. Therefore, the function will always return 0. The options, however, appear to relate to the time complexity of the function. The outer loop runs `n` times. The inner loop runs `log_2(n)` times. Thus the time complexity of the function would be $O(n log n)$. The provided answer key suggests a different complexity, which may be due to an error in the provided document's question or answer key."
-    },
-    {
-        "id": 12,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "The k-Means algorithm is an ______ algorithm.",
-        "options": ["Supervised Learning", "Unsupervised Learning", "Semi-supervised Learning", "Reinforcement Learning"],
-        "answer": "Unsupervised Learning",
-        "explanation": "k-Means is an unsupervised learning algorithm. Unsupervised learning algorithms are given data without explicit instructions and the goal is to find patterns, relationships, or structures within the data. K-Means works by partitioning the input data into clusters based on similarity, without using predefined class labels."
-    },
-    {
-        "id": 13,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Give asymptotic upper and lower bound for T(n) given below. Assume T(n) is constant for $n \le 2$. $T(n) = 4T(\sqrt n) + log^2 n$.",
-        "options": ["$T(n) = \Theta(log^4 n)$", "$T(n) = \Theta(log n)$", "$T(n) = \Theta(log^2 n log log n)$", "$T(n) = \Theta(log^2 n)$"],
-        "answer": "$T(n) = \Theta(log^2 n log log n)$",
-        "explanation": "Let the recurrence be $T(n) = 4T(\sqrt n) + log^2 n$. To simplify, we can use the substitution method. Let $n=2^m$, which gives $m=log_{2}n$. Substituting this into the recurrence, we get $T(2^m) = 4T(2^{m/2}) + (log_{2}2^m)^2 = 4T(2^{m/2}) + m^2$. Let $S(m) = T(2^m)$, so we have $S(m) = 4S(m/2) + m^2$. Using Master's theorem, we compare $f(m) = m^2$ with $m^{log_{b}a} = m^{log_{2}4} = m^2$. Since $f(m) = \Theta(m^{log_{b}a})$, we are in Case 2 of the Master's theorem. Thus, the solution is $S(m) = \Theta(m^{log_{b}a} log m) = \Theta(m^2 log m)$. Substituting $m=log_{2}n$ back, we get $T(n) = \Theta((log_{2}n)^2 log(log_{2}n)) = \Theta(log^2 n log log n)$."
-    },
-    {
-        "id": 14,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Consider a hash table of size 7 with hash function $h(k) = k \pmod 7$, and pseudo random $i = (i+5) \pmod 7$. We want to insert the following keys one by one from left to right: 15, 11, 25, 16, 9, 8, 12. What will be the position of the key 25 if we use random probing?",
-        "options": ["2", "3", "1", "2"],
-        "answer": "2",
-        "explanation": "The hash function is $h(k) = k \pmod 7$. The keys are inserted sequentially. First, 15 is inserted at position $15 \pmod 7 = 1$. Then, 11 is inserted at position $11 \pmod 7 = 4$. Next, we insert 25. The initial hash position for 25 is $25 \pmod 7 = 4$. This position is already occupied by 11. To resolve the collision, we use the probing sequence. The given pseudo-random function is $i = (i+5) \pmod 7$. From the detailed solution, the new position is calculated as the initial position + 5 mod 7. So, the new position is $(4+5) \pmod 7 = 9 \pmod 7 = 2$. Therefore, the key 25 will be inserted at position 2."
-    },
-    {
-        "id": 15,
-        "exam": "Algorithms",
-        "type": "MCQ",
-        "question": "Consider the following undirected graph with edge weights as shown:\n\nThe number of minimum-weight spanning trees of the graph is:",
-        "options": ["1", "2", "3", "4"],
-        "answer": "3",
-        "explanation": "A minimum weight spanning tree (MST) is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together without any cycles, and with the minimum possible total edge weight. The provided solution states that the number of minimum weight spanning trees for the graph shown is 3. This can occur when there are multiple edges of the same weight that can be chosen to form a minimum spanning tree without creating a cycle."
-    }
+    {
+        "id": 1,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "The weight of minimum spanning tree in graph G, calculated using Kruskal's algorithm is:",
+        "options": ["14", "15", "17", "18", "None of the above"],
+        "answer": "15",
+        "explanation": "A minimum spanning tree (MST) is a subset of the edges (V-1) of a connected, edge-weighted undirected graph G(V,E) that connects all the vertices together, without any cycles and with the minimum possible total edge weight. For a graph with 5 vertices, we need 4 edges in the MST. The edge set for the given graph is {2, 3, 4, 5, 6, 7, 8}. The edge set for the MST is {2, 3, 4, 6}. The minimum cost is the sum of these edge weights, which is 2+3+4+6 = 15."
+    },
+    {
+        "id": 2,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Consider the following Statements\nStatement 1: Greedy technique solves the problem correctly and always provides an optimized solution to the problem.\nStatement 2: Bellman ford, Floyd-warshal, and Prim's algorithms use the Dynamic Programming technique to solve the Path problems.\nWhich of the following is true?",
+        "options": ["Statement 1 is true only", "Statement 2 is false only", "Statement 1 and Statement 2 both are false.", "Statement 1 and Statement 2 both are true.", "None of the above"],
+        "answer": "Statement 1 and Statement 2 both are false.",
+        "explanation": "This statement is false. The greedy technique does not always solve a problem correctly and doesn't always provide an optimized solution. Statement 2 is also false. While Bellman-Ford and Floyd-Warshall are dynamic programming algorithms, Prim's algorithm is a greedy algorithm, not a dynamic programming one. It is used to find a minimum spanning tree for a weighted undirected graph."
+    },
+    {
+        "id": 3,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Time complexity of Merge Sort Algorithm and Binary Search Algorithm are respectively:",
+        "options": ["$O(log_{2}n)$ and $O(n~log_{2}n)$", "$O(n~log_{2}n)$ and $O(log_{2}n)$", "$O(n^{2})$ and $O(log_{2}n)$", "$O(2^{n})$ and $O(n^{2})$", "None of the above"],
+        "answer": "$O(n~log_{2}n)$ and $O(log_{2}n)$",
+        "explanation": "Merge sort is based on the divide and conquer approach, and its recurrence relation is $T(n)=2T(n/2)+\Theta(n)$. Using Master's theorem, the time complexity of Merge Sort is $O(n log_{2}n)$. Binary search works by repeatedly dividing the search interval in half. The recurrence for binary search is $T(n)=T(n/2)+\theta(1)$. Using Master's theorem, its time complexity is $O(log_{2}n)$."
+    },
+    {
+        "id": 4,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Which of the following algorithm design technique is used in designing quick sort algorithm?",
+        "options": ["Dynamic", "Back tracking strategy", "Divide and conquer strategy", "Greedy strategy", "None of the above"],
+        "answer": "Divide and conquer strategy",
+        "explanation": "Quicksort is a divide-and-conquer algorithm. In this technique, a pivot element is chosen to reduce the problem into two smaller sets. The overall time complexity of Quicksort is $O(n log n)$. Its space complexity is $O(log n)$ and it is an in-place sort."
+    },
+    {
+        "id": 5,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Which one of the following properties of an algorithm ensures that each step of the algorithm is properly defined and the actions to be performed are clearly specified?",
+        "options": ["Finiteness", "Effectiveness", "Input", "Definiteness", "None of the above"],
+        "answer": "Definiteness",
+        "explanation": "Definiteness is the property that ensures each step of an algorithm is precisely defined, and the actions to be carried out are rigorously and unambiguously specified for each case. Other properties include Finiteness, which means the algorithm must terminate after a finite number of steps, and Effectiveness, which means each step must be feasible to perform correctly in a finite amount of time with available resources."
+    },
+    {
+        "id": 6,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "A ☐ is used to show the processing that takes place in the flowchart.",
+        "options": ["Diamond", "Ellipse", "Arrows", "Rectangle"],
+        "answer": "Rectangle",
+        "explanation": "In flowcharts, a rectangle represents a process. An oval represents a start or end point, a parallelogram represents input or output, and a diamond indicates a decision."
+    },
+    {
+        "id": 7,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "What is the time complexity for the following C module? Assume that n > 0;\n\n```c\nint module(int n)\n{\n if(n==1)\n return 1;\n else\n return (n+module(n-1))\n}\n```",
+        "options": ["O(n)", "O(log n)", "$O(n^{2})$", "$O(n!)$"],
+        "answer": "O(n)",
+        "explanation": "The recurrence relation for the given function is $T(n) = T(n-1) + c$, where 'c' represents a constant amount of work for the addition and function call. By expanding this recurrence, we find that the total number of steps is proportional to n. For example, $T(n) = T(n-k) + kc$. When $n-k=1$, then $k=n-1$. This leads to a time complexity of $O(n)$."
+    },
+    {
+        "id": 8,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Consider the recurrence function $T(n)=\begin{cases}2T(\sqrt n)+1,n>2\\\\ 2,0<n\le2\end{cases}$. Then T(n) in terms of big O notation is:",
+        "options": ["$O(log log n)$", "$O(log n)$", "$O(\sqrt n)$", "$O(n)$"],
+        "answer": "$O(log n)$",
+        "explanation": "The recurrence relation is $T(n)=2T(\sqrt n)+1$. By substituting $n = 2^m$, we get $T(2^m)=2T(2^{m/2})+1$. Let $S(m) = T(2^m)$. Then the new recurrence is $S(m) = 2S(m/2)+1$. This recurrence is in the form of Master's theorem's case 1, which gives a solution of $S(m) = O(m)$. Since $m=log_{2}n$, we have $T(n) = O(log_{2}n)$."
+    },
+    {
+        "id": 9,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Which one of the following correctly determines the solution of the recurrence relation with T(1)=1? $T(n) = 2T(\frac{n}{2}) + logn$",
+        "options": ["$T(n)= \Theta(n)$", "$T(n)= \Theta(n log n)$", "$T(n)= \Theta(n^2)$", "$T(n)= \Theta(log n)$"],
+        "answer": "$T(n)= \Theta(n)$",
+        "explanation": "The recurrence relation is $T(n) = 2T(\frac{n}{2}) + log n$. We can use the Master's theorem to solve this. Comparing it with $T(n) = aT(\frac{n}{b}) + f(n)$, we get $a=2, b=2$, and $f(n)=log n$. We compare $f(n)$ with $n^{log_{b}a} = n^{log_{2}2} = n$. Since $log n$ is polynomially smaller than $n$, we are in Case 1 of the Master's theorem. This means the solution is $T(n) = \Theta(n^{log_{b}a}) = \Theta(n)$."
+    },
+    {
+        "id": 10,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "In flowchart representation, which of the following symbols indicates input/output?",
+        "options": ["Oval", "Parallelogram", "Diamond", "Rectangle"],
+        "answer": "Parallelogram",
+        "explanation": "A parallelogram represents input or output in a flowchart. An oval represents a start or end point, a rectangle represents a process, and a diamond indicates a decision."
+    },
+    {
+        "id": 11,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "What is the time complexity for the following C module? Assume that n > 0;\n\n```c\nint fun1(int n)\n{\n int i,j,k, p,q=0;\n for(i=1; i<=n; i++)\n {\n  p=0;\n  for(j=n; j>1; j/=2)\n  {\n   p++;\n  }\n  k=k*2;\n }\n return q;\n}\n```\n\nWhich one of the following most closely approximates the return value of the function fun1?",
+        "options": ["$n^2$", "$n log^2 n$", "$n log n$", "$n log(log n)$"],
+        "answer": "$n log(log n)$",
+        "explanation": "The function `fun1` has a return value `q` which is initialized to 0 and is never changed. Therefore, the function will always return 0. The options, however, appear to relate to the time complexity of the function. The outer loop runs `n` times. The inner loop runs `log_2(n)` times. Thus the time complexity of the function would be $O(n log n)$. The provided answer key suggests a different complexity, which may be due to an error in the provided document's question or answer key."
+    },
+    {
+        "id": 12,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "The k-Means algorithm is an ______ algorithm.",
+        "options": ["Supervised Learning", "Unsupervised Learning", "Semi-supervised Learning", "Reinforcement Learning"],
+        "answer": "Unsupervised Learning",
+        "explanation": "k-Means is an unsupervised learning algorithm. Unsupervised learning algorithms are given data without explicit instructions and the goal is to find patterns, relationships, or structures within the data. K-Means works by partitioning the input data into clusters based on similarity, without using predefined class labels."
+    },
+    {
+        "id": 13,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Give asymptotic upper and lower bound for T(n) given below. Assume T(n) is constant for $n \le 2$. $T(n) = 4T(\sqrt n) + log^2 n$.",
+        "options": ["$T(n) = \Theta(log^4 n)$", "$T(n) = \Theta(log n)$", "$T(n) = \Theta(log^2 n log log n)$", "$T(n) = \Theta(log^2 n)$"],
+        "answer": "$T(n) = \Theta(log^2 n log log n)$",
+        "explanation": "Let the recurrence be $T(n) = 4T(\sqrt n) + log^2 n$. To simplify, we can use the substitution method. Let $n=2^m$, which gives $m=log_{2}n$. Substituting this into the recurrence, we get $T(2^m) = 4T(2^{m/2}) + (log_{2}2^m)^2 = 4T(2^{m/2}) + m^2$. Let $S(m) = T(2^m)$, so we have $S(m) = 4S(m/2) + m^2$. Using Master's theorem, we compare $f(m) = m^2$ with $m^{log_{b}a} = m^{log_{2}4} = m^2$. Since $f(m) = \Theta(m^{log_{b}a})$, we are in Case 2 of the Master's theorem. Thus, the solution is $S(m) = \Theta(m^{log_{b}a} log m) = \Theta(m^2 log m)$. Substituting $m=log_{2}n$ back, we get $T(n) = \Theta((log_{2}n)^2 log(log_{2}n)) = \Theta(log^2 n log log n)$."
+    },
+    {
+        "id": 14,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Consider a hash table of size 7 with hash function $h(k) = k \pmod 7$, and pseudo random $i = (i+5) \pmod 7$. We want to insert the following keys one by one from left to right: 15, 11, 25, 16, 9, 8, 12. What will be the position of the key 25 if we use random probing?",
+        "options": ["2", "3", "1", "2"],
+        "answer": "2",
+        "explanation": "The hash function is $h(k) = k \pmod 7$. The keys are inserted sequentially. First, 15 is inserted at position $15 \pmod 7 = 1$. Then, 11 is inserted at position $11 \pmod 7 = 4$. Next, we insert 25. The initial hash position for 25 is $25 \pmod 7 = 4$. This position is already occupied by 11. To resolve the collision, we use the probing sequence. The given pseudo-random function is $i = (i+5) \pmod 7$. From the detailed solution, the new position is calculated as the initial position + 5 mod 7. So, the new position is $(4+5) \pmod 7 = 9 \pmod 7 = 2$. Therefore, the key 25 will be inserted at position 2."
+    },
+    {
+        "id": 15,
+        "exam": "Algorithms",
+        "type": "MCQ",
+        "question": "Consider the following undirected graph with edge weights as shown:\n\nThe number of minimum-weight spanning trees of the graph is:",
+        "options": ["1", "2", "3", "4"],
+        "answer": "3",
+        "explanation": "A minimum weight spanning tree (MST) is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together without any cycles, and with the minimum possible total edge weight. The provided solution states that the number of minimum weight spanning trees for the graph shown is 3. This can occur when there are multiple edges of the same weight that can be chosen to form a minimum spanning tree without creating a cycle."
+    }
 ]
 
