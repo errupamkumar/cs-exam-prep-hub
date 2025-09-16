@@ -1,94 +1,127 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Array of question objects
-    const questions = [
-        {
-            source: 'GATE CSE 2023',
-            type: 'MCQ',
-            question: 'What is the time complexity of the best-case scenario for Bubble Sort?',
-            options: ['O(n^2)', 'O(n log n)', 'O(n)', 'O(1)'],
-            correctAnswer: 'C',
-            explanation: 'The best-case scenario for Bubble Sort occurs when the array is already sorted. In this case, the algorithm makes only one pass through the array (n-1 comparisons) to check if it is sorted, resulting in a time complexity of O(n).'
-        },
-        {
-            source: 'ISRO Scientist 2022',
-            type: 'MCQ',
-            question: 'Which of the following is not a layer in the TCP/IP model?',
-            options: ['Application Layer', 'Transport Layer', 'Session Layer', 'Internet Layer'],
-            correctAnswer: 'C',
-            explanation: 'The TCP/IP model consists of four layers: Application, Transport, Internet, and Network Access (or Link) Layer. The Session Layer is part of the OSI model, not the TCP/IP model.'
-        },
-        {
-            source: 'BPSC TRE 2.0',
-            type: 'MSQ',
-            question: 'Which of the following are valid IP addresses? (Select all that apply)',
-            options: ['192.168.1.256', '127.0.0.1', '255.255.255.0', '1.2.3'],
-            correctAnswer: 'B, C',
-            explanation: 'An IP address consists of four octets, with each octet ranging from 0 to 255. A) is invalid because 256 is out of range. B) is the loopback address. C) is a valid subnet mask. D) is invalid as it only has three octets.'
-        },
-        {
-            source: 'TCS NQT 2024',
-            type: 'MCQ',
-            question: 'In object-oriented programming, what is encapsulation?',
-            options: ['The ability of an object to take on many forms.', 'The bundling of data with the methods that operate on that data.', 'The process of defining one class from another class.', 'The process of hiding complexity behind a simple interface.'],
-            correctAnswer: 'B',
-            explanation: 'Encapsulation is one of the fundamental principles of OOP. It refers to the bundling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It is often used to hide the internal state of an object from the outside.'
-        },
-        {
-            source: 'Infosys Certification',
-            type: 'MCQ',
-            question: 'Which SQL statement is used to extract data from a database?',
-            options: ['GET', 'OPEN', 'SELECT', 'EXTRACT'],
-            correctAnswer: 'C',
-            explanation: 'The `SELECT` statement is the standard SQL command used to query a database and retrieve data that matches criteria that you specify.'
-        }
-    ];
-
     const questionsContainer = document.getElementById('questions-container');
+    const filterContainer = document.getElementById('filter-container');
+    let allQuestions = [];
 
-    // Function to load questions into the DOM
-    function loadQuestions() {
-        if (!questionsContainer) return;
+    // Fetch questions from the JSON file
+    async function fetchQuestions() {
+        try {
+            const response = await fetch('questions.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            allQuestions = await response.json();
+            displayQuestions(allQuestions);
+        } catch (error) {
+            console.error("Could not fetch questions:", error);
+            questionsContainer.innerHTML = "<p>Failed to load questions. Please try again later.</p>";
+        }
+    }
 
-        questions.forEach((q, index) => {
+    // Display questions on the page
+    function displayQuestions(questionsToDisplay) {
+        questionsContainer.innerHTML = '';
+        if (questionsToDisplay.length === 0) {
+            questionsContainer.innerHTML = "<p>No questions found for this filter.</p>";
+            return;
+        }
+
+        questionsToDisplay.forEach(q => {
             const card = document.createElement('div');
             card.className = 'question-card';
+            card.setAttribute('data-id', q.id);
 
-            const optionsHTML = q.options.map((option, i) =>
-                `<li>${String.fromCharCode(65 + i)}) ${option}</li>`
-            ).join('');
+            const inputType = q.type === 'MSQ' ? 'checkbox' : 'radio';
+            const optionsHTML = q.options.map((option, index) => {
+                const optionLetter = String.fromCharCode(65 + index);
+                return `
+                    <div class="option">
+                        <label for="q${q.id}_option${optionLetter}">
+                            <input type="${inputType}" name="q${q.id}_options" id="q${q.id}_option${optionLetter}" value="${optionLetter}">
+                            ${optionLetter}) ${option}
+                        </label>
+                    </div>
+                `;
+            }).join('');
 
             card.innerHTML = `
-                <div class="source">[${q.source}] - ${q.type}</div>
-                <p class="question-text">${index + 1}. ${q.question}</p>
-                <ul class="options-list">${optionsHTML}</ul>
-                <button class="toggle-answer-btn" data-question-id="${index}">Show Answer</button>
-                <div class="answer-explanation" id="answer-${index}">
-                    <p class="correct-answer">Correct Answer: ${q.correctAnswer}</p>
-                    <p><strong>Explanation:</strong> ${q.explanation}</p>
-                </div>
+                <div class="source">[${q.exam}] - ${q.type}</div>
+                <p class="question-text">${q.question}</p>
+                <form class="options-form">${optionsHTML}</form>
+                <button class="submit-btn">Submit</button>
+                <div class="result-feedback"></div>
             `;
-
             questionsContainer.appendChild(card);
         });
     }
 
-    // Event listener for toggling answers
-    questionsContainer.addEventListener('click', (event) => {
-        if (event.target.classList.contains('toggle-answer-btn')) {
-            const questionId = event.target.dataset.questionId;
-            const answerDiv = document.getElementById(`answer-${questionId}`);
-            const button = event.target;
+    // Handle filter button clicks
+    filterContainer.addEventListener('click', (event) => {
+        if (event.target.tagName === 'BUTTON') {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
 
-            if (answerDiv.style.display === 'block') {
-                answerDiv.style.display = 'none';
-                button.textContent = 'Show Answer';
+            const filterValue = event.target.getAttribute('data-filter');
+            if (filterValue === 'All') {
+                displayQuestions(allQuestions);
             } else {
-                answerDiv.style.display = 'block';
-                button.textContent = 'Hide Answer';
+                const filteredQuestions = allQuestions.filter(q => q.exam === filterValue);
+                displayQuestions(filteredQuestions);
             }
         }
     });
 
+    // Handle answer submission
+    questionsContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('submit-btn')) {
+            const card = event.target.closest('.question-card');
+            const questionId = parseInt(card.getAttribute('data-id'));
+            const questionData = allQuestions.find(q => q.id === questionId);
+            const form = card.querySelector('.options-form');
+            const resultDiv = card.querySelector('.result-feedback');
+            
+            const selectedOptions = Array.from(form.querySelectorAll('input:checked')).map(input => input.value);
+            
+            let isCorrect = false;
+            if (questionData.type === 'MCQ') {
+                isCorrect = selectedOptions.length === 1 && selectedOptions[0] === questionData.answer;
+            } else { // MSQ
+                isCorrect = selectedOptions.length === questionData.answer.length &&
+                            selectedOptions.sort().every((value, index) => value === questionData.answer.sort()[index]);
+            }
+            
+            // Provide feedback
+            resultDiv.style.display = 'block';
+            if (isCorrect) {
+                resultDiv.classList.add('correct');
+                resultDiv.innerHTML = `<p class="feedback-text">Correct!</p><p><strong>Explanation:</strong> ${questionData.explanation}</p>`;
+            } else {
+                resultDiv.classList.add('incorrect');
+                const correctAnswerText = Array.isArray(questionData.answer) ? questionData.answer.join(', ') : questionData.answer;
+                resultDiv.innerHTML = `<p class="feedback-text">Incorrect.</p><p><strong>Correct Answer:</strong> ${correctAnswerText}</p><p><strong>Explanation:</strong> ${questionData.explanation}</p>`;
+            }
+
+            // Highlight correct and incorrect choices
+            const labels = form.querySelectorAll('label');
+            labels.forEach(label => {
+                const input = label.querySelector('input');
+                const isSelected = selectedOptions.includes(input.value);
+                const isAnswer = Array.isArray(questionData.answer) ? questionData.answer.includes(input.value) : questionData.answer === input.value;
+
+                if (isAnswer) {
+                    label.classList.add('correct-answer');
+                }
+                if (isSelected && !isAnswer) {
+                    label.classList.add('incorrect');
+                }
+            });
+
+            // Disable form
+            form.querySelectorAll('input').forEach(input => input.disabled = true);
+            event.target.disabled = true;
+        }
+    });
+
     // Initial load of questions
-    loadQuestions();
+    fetchQuestions();
 });
