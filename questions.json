@@ -6,7 +6,7 @@
         "question": "The weight of minimum spanning tree in graph G, calculated using Kruskal's algorithm is:",
         "options": ["14", "15", "17", "18", "None of the above"],
         "answer": "15",
-[cite_start]        "explanation": "A minimum spanning tree (MST) is a subset of the edges (V-1) of a connected, edge-weighted undirected graph G(V,E) that connects all the vertices together, without any cycles and with the minimum possible total edge weight[cite: 38]. [cite_start]For a graph with 5 vertices, we need 4 edges in the MST[cite: 41]. [cite_start]The edge set for the given graph is {2, 3, 4, 5, 6, 7, 8}[cite: 40]. [cite_start]The edge set for the MST is {2, 3, 4, 6}[cite: 42]. [cite_start]The minimum cost is the sum of these edge weights, which is 2+3+4+6 = 15[cite: 49]."
+        "explanation": "A minimum spanning tree (MST) is a subset of the edges (V-1) of a connected, edge-weighted undirected graph G(V,E) that connects all the vertices together, without any cycles and with the minimum possible total edge weight. For a graph with 5 vertices, we need 4 edges in the MST. The edge set for the given graph is {2, 3, 4, 5, 6, 7, 8}. The edge set for the MST is {2, 3, 4, 6}. The minimum cost is the sum of these edge weights, which is 2+3+4+6 = 15."
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "question": "Consider the following Statements\nStatement 1: Greedy technique solves the problem correctly and always provides an optimized solution to the problem.\nStatement 2: Bellman ford, Floyd-warshal, and Prim's algorithms use the Dynamic Programming technique to solve the Path problems.\nWhich of the following is true?",
         "options": ["Statement 1 is true only", "Statement 2 is false only", "Statement 1 and Statement 2 both are false.", "Statement 1 and Statement 2 both are true.", "None of the above"],
         "answer": "Statement 1 and Statement 2 both are false.",
-        "explanation": "This statement is false. [cite_start]The greedy technique does not always solve a problem correctly and doesn't always provide an optimized solution[cite: 78]. Statement 2 is also false. [cite_start]While Bellman-Ford and Floyd-Warshall are dynamic programming algorithms, Prim's algorithm is a greedy algorithm, not a dynamic programming one[cite: 80, 81]. [cite_start]It is used to find a minimum spanning tree for a weighted undirected graph[cite: 81]."
+        "explanation": "This statement is false. The greedy technique does not always solve a problem correctly and doesn't always provide an optimized solution. Statement 2 is also false. While Bellman-Ford and Floyd-Warshall are dynamic programming algorithms, Prim's algorithm is a greedy algorithm, not a dynamic programming one. It is used to find a minimum spanning tree for a weighted undirected graph."
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "question": "Time complexity of Merge Sort Algorithm and Binary Search Algorithm are respectively:",
         "options": ["$O(log_{2}n)$ and $O(n~log_{2}n)$", "$O(n~log_{2}n)$ and $O(log_{2}n)$", "$O(n^{2})$ and $O(log_{2}n)$", "$O(2^{n})$ and $O(n^{2})$", "None of the above"],
         "answer": "$O(n~log_{2}n)$ and $O(log_{2}n)$",
-[cite_start]        "explanation": "Merge sort is based on the divide and conquer approach, and its recurrence relation is $T(n)=2T(n/2)+\Theta(n)$[cite: 104, 106]. [cite_start]Using Master's theorem, the time complexity of Merge Sort is $O(n log_{2}n)$[cite: 108, 110]. [cite_start]Binary search works by repeatedly dividing the search interval in half[cite: 112]. [cite_start]The recurrence for binary search is $T(n)=T(n/2)+\theta(1)$[cite: 113]. [cite_start]Using Master's theorem, its time complexity is $O(log_{2}n)$[cite: 115, 116]."
+        "explanation": "Merge sort is based on the divide and conquer approach, and its recurrence relation is $T(n)=2T(n/2)+\Theta(n)$. Using Master's theorem, the time complexity of Merge Sort is $O(n log_{2}n)$. Binary search works by repeatedly dividing the search interval in half. The recurrence for binary search is $T(n)=T(n/2)+\theta(1)$. Using Master's theorem, its time complexity is $O(log_{2}n)$."
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "question": "Which of the following algorithm design technique is used in designing quick sort algorithm?",
         "options": ["Dynamic", "Back tracking strategy", "Divide and conquer strategy", "Greedy strategy", "None of the above"],
         "answer": "Divide and conquer strategy",
-[cite_start]        "explanation": "Quicksort is a divide-and-conquer algorithm[cite: 141]. [cite_start]In this technique, a pivot element is chosen to reduce the problem into two smaller sets[cite: 141]. [cite_start]The overall time complexity of Quicksort is $O(n log n)$[cite: 145]. [cite_start]Its space complexity is $O(log n)$ and it is an in-place sort[cite: 147]."
+        "explanation": "Quicksort is a divide-and-conquer algorithm. In this technique, a pivot element is chosen to reduce the problem into two smaller sets. The overall time complexity of Quicksort is $O(n log n)$. Its space complexity is $O(log n)$ and it is an in-place sort."
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "question": "Which one of the following properties of an algorithm ensures that each step of the algorithm is properly defined and the actions to be performed are clearly specified?",
         "options": ["Finiteness", "Effectiveness", "Input", "Definiteness", "None of the above"],
         "answer": "Definiteness",
-[cite_start]        "explanation": "Definiteness is the property that ensures each step of an algorithm is precisely defined, and the actions to be carried out are rigorously and unambiguously specified for each case[cite: 171, 172, 180]. [cite_start]Other properties include Finiteness, which means the algorithm must terminate after a finite number of steps [cite: 177, 179][cite_start], and Effectiveness, which means each step must be feasible to perform correctly in a finite amount of time with available resources[cite: 181, 182, 183]."
+        "explanation": "Definiteness is the property that ensures each step of an algorithm is precisely defined, and the actions to be carried out are rigorously and unambiguously specified for each case. Other properties include Finiteness, which means the algorithm must terminate after a finite number of steps, and Effectiveness, which means each step must be feasible to perform correctly in a finite amount of time with available resources."
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "question": "A ☐ is used to show the processing that takes place in the flowchart.",
         "options": ["Diamond", "Ellipse", "Arrows", "Rectangle"],
         "answer": "Rectangle",
-[cite_start]        "explanation": "In flowcharts, a rectangle represents a process[cite: 213]. [cite_start]An oval represents a start or end point, a parallelogram represents input or output, and a diamond indicates a decision[cite: 213]."
+        "explanation": "In flowcharts, a rectangle represents a process. An oval represents a start or end point, a parallelogram represents input or output, and a diamond indicates a decision."
     },
     {
         "id": 7,
@@ -60,16 +60,16 @@
         "question": "What is the time complexity for the following C module? Assume that n > 0;\n\n```c\nint module(int n)\n{\n if(n==1)\n return 1;\n else\n return (n+module(n-1))\n}\n```",
         "options": ["O(n)", "O(log n)", "$O(n^{2})$", "$O(n!)$"],
         "answer": "O(n)",
-[cite_start]        "explanation": "The recurrence relation for the given function is $T(n) = T(n-1) + c$[cite: 247], where 'c' represents a constant amount of work for the addition and function call. By expanding this recurrence, we find that the total number of steps is proportional to n. [cite_start]For example, $T(n) = T(n-k) + kc$[cite: 250]. When $n-k=1$, then $k=n-1$. [cite_start]This leads to a time complexity of $O(n)$[cite: 254, 255]."
+        "explanation": "The recurrence relation for the given function is $T(n) = T(n-1) + c$, where 'c' represents a constant amount of work for the addition and function call. By expanding this recurrence, we find that the total number of steps is proportional to n. For example, $T(n) = T(n-k) + kc$. When $n-k=1$, then $k=n-1$. This leads to a time complexity of $O(n)$."
     },
     {
         "id": 8,
         "exam": "Algorithms",
         "type": "MCQ",
-        "question": "Consider the recurrence function $T(n)=\begin{cases}2T(\sqrt n)+1,n>2\\ 2,0<n\le2\end{cases}$. Then T(n) in terms of big O notation is:",
+        "question": "Consider the recurrence function $T(n)=\begin{cases}2T(\sqrt n)+1,n>2\\\\ 2,0<n\le2\end{cases}$. Then T(n) in terms of big O notation is:",
         "options": ["$O(log log n)$", "$O(log n)$", "$O(\sqrt n)$", "$O(n)$"],
         "answer": "$O(log n)$",
-        "explanation": "The recurrence relation is $T(n)=2T(\sqrt n)+1$. [cite_start]By substituting $n = 2^m$, we get $T(2^m)=2T(2^{m/2})+1$[cite: 265]. Let $S(m) = T(2^m)$. [cite_start]Then the new recurrence is $S(m) = 2S(m/2)+1$[cite: 265]. This recurrence is in the form of Master's theorem's case 1, which gives a solution of $S(m) = O(m)$. [cite_start]Since $m=log_{2}n$, we have $T(n) = O(log_{2}n)$[cite: 265]."
+        "explanation": "The recurrence relation is $T(n)=2T(\sqrt n)+1$. By substituting $n = 2^m$, we get $T(2^m)=2T(2^{m/2})+1$. Let $S(m) = T(2^m)$. Then the new recurrence is $S(m) = 2S(m/2)+1$. This recurrence is in the form of Master's theorem's case 1, which gives a solution of $S(m) = O(m)$. Since $m=log_{2}n$, we have $T(n) = O(log_{2}n)$."
     },
     {
         "id": 9,
@@ -87,7 +87,7 @@
         "question": "In flowchart representation, which of the following symbols indicates input/output?",
         "options": ["Oval", "Parallelogram", "Diamond", "Rectangle"],
         "answer": "Parallelogram",
-[cite_start]        "explanation": "A parallelogram represents input or output in a flowchart[cite: 213]. [cite_start]An oval represents a start or end point, a rectangle represents a process, and a diamond indicates a decision[cite: 213]."
+        "explanation": "A parallelogram represents input or output in a flowchart. An oval represents a start or end point, a rectangle represents a process, and a diamond indicates a decision."
     },
     {
         "id": 11,
