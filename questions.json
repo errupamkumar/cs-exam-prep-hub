@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "exam": "GATE",
+        "type": "MCQ",
+        "question": "What is the worst-case time complexity for accessing an element in a hash table (using chaining)?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+        "answer": "C",
+        "explanation": "In the worst-case scenario, all keys map to the same hash index, causing all elements to be stored in a single linked list. Accessing an element would then require traversing this list, resulting in O(n) time complexity."
+    },
+    {
+        "id": 2,
+        "exam": "BPSC",
+        "type": "MSQ",
+        "question": "Which of the following are considered process scheduling algorithms? (Select all that apply)",
+        "options": ["First-Come, First-Served (FCFS)", "Shortest Job First (SJF)", "Round Robin", "Dijkstra's Algorithm"],
+        "answer": ["A", "B", "C"],
+        "explanation": "FCFS, SJF, and Round Robin are all CPU scheduling algorithms used by the operating system to manage processes. Dijkstra's Algorithm is a graph search algorithm used for finding the shortest paths."
+    },
+    {
+        "id": 3,
+        "exam": "ISRO",
+        "type": "MCQ",
+        "question": "Which layer of the OSI model is responsible for routing packets from a source to a destination across multiple networks?",
+        "options": ["Data Link Layer", "Network Layer", "Transport Layer", "Session Layer"],
+        "answer": "B",
+        "explanation": "The Network Layer (Layer 3) is responsible for logical addressing (like IP addresses) and determining the best path for data packets to travel from the source to the destination, a process known as routing."
+    },
+    {
+        "id": 4,
+        "exam": "GATE",
+        "type": "MSQ",
+        "question": "Which of the following are true about the `PRIMARY KEY` constraint in SQL? (Select all that apply)",
+        "options": ["It uniquely identifies each record in a table.", "A table can have multiple primary keys.", "It can contain NULL values.", "It is a combination of NOT NULL and UNIQUE constraints."],
+        "answer": ["A", "D"],
+        "explanation": "A primary key must contain unique values for each row and cannot contain NULL values. Therefore, it uniquely identifies each record. A table can have only one primary key. It effectively combines the UNIQUE and NOT NULL constraints."
+    }
+]
